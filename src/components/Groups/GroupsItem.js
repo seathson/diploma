@@ -5,7 +5,7 @@ function GroupsItem(props) {
   console.log(props.group)
   return (
     <div className="group">
-      <div className="group__image">
+      <div className="image">
         <img
           src={
             'http://localhost:1337' +
@@ -14,8 +14,8 @@ function GroupsItem(props) {
           alt=""
         />
       </div>
-      <div className="group__title">{props.group.attributes.number}</div>
-      <div className="group__button"><Link to={props.group.attributes.number}>выбрать</Link></div>
+      <div className="title">{props.group.attributes.number}</div>
+      <div className="button"><Link to={props.group.attributes.number}>выбрать</Link></div>
     </div>
   )
 }

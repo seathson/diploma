@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
+import Students from '../Students/Students'
 
 function Group(props) {
   let course = (useParams().index + '')[2]
@@ -20,7 +21,7 @@ function Group(props) {
 
   useEffect(() => {
     axios(
-      `http://localhost:1337/api/students?filters[speciality][$eq]=${spec}&filters[course][$eq]=${course}`
+      `http://localhost:1337/api/students?filters[speciality][$eq]=${spec}&filters[course][$eq]=${course}&populate=*`
     )
       .then((res) => res.data)
       .then((result) => {
@@ -33,7 +34,9 @@ function Group(props) {
 
   console.log(group)
 
-  return <div></div>
+  return <div>
+    <Students students={group}/>
+  </div>
 }
 
 export default Group
