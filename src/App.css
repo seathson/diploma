@@ -25,6 +25,8 @@ html {
 
 .wrapper {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
@@ -32,7 +34,45 @@ html {
   display: flex;
   max-width: 1200px;
   justify-content: center;
+  width: 100%; 
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
   width: 100%;
+  margin-bottom: 20px;
+  background-color: rgb(64,199,129);
+}
+
+.header__title {
+  color: aliceblue;
+}
+
+.header__button {
+  display: flex;
+  color: white;
+  justify-content: center;
+  text-transform: uppercase;
+  align-items: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 7px;
+  background: #3775DD;
+  height: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 9px -3px #000000;
+}
+
+.header__button_back {
+  background-color: rgb(255, 66, 66);
+  margin-top: 20px;
 }
 
 .groups {
@@ -58,12 +98,11 @@ html {
   display: flex;
   width: 120px;
   height: 120px;
-  opacity: 0.7;
 }
 
 .image img {
   width: 120px;
-  height: 120px;
+  height: 110px;
 }
 
 
@@ -87,6 +126,7 @@ html {
   height: 20px;
   margin-top: 10px;
   cursor: pointer;
+  box-shadow: 0px 0px 9px -3px #000000;
 }
 
 a {
@@ -119,8 +159,44 @@ a {
   text-align: center;
   align-items: center;
   justify-content: center;
+  margin-top: 10px;
 }
 
 .grade {
   display: flex;
+}
+
+.fields {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.fields__row {
+  flex-direction: row;
+}
+
+.field {
+  display: flex;
+  justify-content: center;
+  font-size: 0.9rem;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 7px;
+  background-color: rgb(255, 255, 255);
+  margin: 10px;
+  box-shadow: 0px 0px 9px -3px #000000;
+  padding: 10px;
+}
+
+.fieldImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fieldImage img {
+  width: 300px;
 }

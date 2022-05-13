@@ -6,7 +6,7 @@ function GroupsItem(props) {
   return (
     <div className="group">
       <div className="image">
-        <img
+        <img style={{opacity: 0.7}}
           src={
             'http://localhost:1337' +
             props.group.attributes.image.data.attributes.url
@@ -15,7 +15,7 @@ function GroupsItem(props) {
         />
       </div>
       <div className="title">{props.group.attributes.number}</div>
-      <div className="button"><Link to={props.group.attributes.number}>выбрать</Link></div>
+      <Link to={props.group.attributes.number}><div className="button">выбрать</div></Link>
     </div>
   )
 }

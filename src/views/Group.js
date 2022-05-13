@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
-import Students from '../Students/Students'
+import Students from '../components/Students/Students'
 
 function Group(props) {
   let course = (useParams().index + '')[2]

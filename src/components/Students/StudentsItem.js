@@ -26,9 +26,7 @@ function StudentsItem(props) {
       </div>
       <div className='name'>{student.fullName}</div>
       <div className="grade">Успеваемость: {performance}</div>
-      <div className="button">
-        <Link to={`../student/${student.creditNumber}`}>выбрать</Link>
-      </div>
+        <Link to={`../student/${student.creditNumber}`}><div className="button">выбрать</div></Link>
     </div>
   )
 }
