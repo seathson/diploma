@@ -5,7 +5,6 @@ import { useNavigate, useLocation } from 'react-router-dom'
 export function MainLayout({ children, title = 'Учет студентов' }) {
   let navigate = useNavigate()
   let location = useLocation()
-  console.log(location)
   return (
     <>
       {/* <Head>

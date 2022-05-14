@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from "react-router-dom";
 
 function GroupsItem(props) {
-  console.log(props.group)
   return (
     <div className="group">
       <div className="image">

@@ -7,36 +7,36 @@ function Student(props) {
   const [student, setStudent] = useState('')
 
   let performance = ''
-  if (student.academicPerformance == 'veryLow') {
+  if (student.academicPerformance === 'veryLow') {
     performance = 'Очень низкая'
-  } else if (student.academicPerformance == 'low') {
+  } else if (student.academicPerformance === 'low') {
     performance = 'Низкая'
-  } else if (student.academicPerformance == 'med') {
+  } else if (student.academicPerformance === 'med') {
     performance = 'Средняя'
-  } else if (student.academicPerformance == 'high') {
+  } else if (student.academicPerformance === 'high') {
     performance = 'Высокая'
   }
 
   let form = ''
-  if (student.formEducation == 'full') {
+  if (student.formEducation === 'full') {
     form = 'Очная'
   } else {
     form = 'Заочная'
   }
 
   let department = ''
-  if (student.department == 'spo') {
+  if (student.department === 'spo') {
     department = 'СПО'
-  } else if (student.department == 'vo') {
+  } else if (student.department === 'vo') {
     department = 'ВО'
   }
 
   let spec = ''
-  if (student.speciality == 'Programmer') {
+  if (student.speciality === 'Programmer') {
     spec = 'Программист'
-  } else if (student.speciality == 'Electrician') {
+  } else if (student.speciality === 'Electrician') {
     spec = 'Электрик'
-  } else if (student.speciality == 'Mechanic') {
+  } else if (student.speciality === 'Mechanic') {
     spec = 'Механик'
   }
 
