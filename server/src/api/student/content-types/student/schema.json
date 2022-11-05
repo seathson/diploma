@@ -1,0 +1,95 @@
+{
+  "kind": "collectionType",
+  "collectionName": "students",
+  "info": {
+    "singularName": "student",
+    "pluralName": "students",
+    "displayName": "student",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "creditNumber": {
+      "type": "biginteger"
+    },
+    "fullName": {
+      "type": "string"
+    },
+    "dateOfBirth": {
+      "type": "date"
+    },
+    "passportID": {
+      "type": "biginteger"
+    },
+    "speciality": {
+      "type": "enumeration",
+      "enum": [
+        "Programmer",
+        "Electrician",
+        "Mechanic"
+      ]
+    },
+    "group": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::group.group",
+      "inversedBy": "students"
+    },
+    "course": {
+      "type": "integer"
+    },
+    "department": {
+      "type": "enumeration",
+      "enum": [
+        "spo",
+        "vo"
+      ]
+    },
+    "formEducation": {
+      "type": "enumeration",
+      "enum": [
+        "full",
+        "absentia"
+      ]
+    },
+    "phone": {
+      "type": "biginteger"
+    },
+    "email": {
+      "type": "email"
+    },
+    "address": {
+      "type": "richtext"
+    },
+    "enrollmentDate": {
+      "type": "date"
+    },
+    "expirationDate": {
+      "type": "date"
+    },
+    "academicPerformance": {
+      "type": "enumeration",
+      "enum": [
+        "veryLow",
+        "low",
+        "med",
+        "high"
+      ]
+    },
+    "graduated": {
+      "type": "boolean"
+    },
+    "photo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
